@@ -6,19 +6,25 @@ public class DictionaryObject<TKey, TData>{
     private TKey key;
     private TData data;
 
-    public DictionaryObject(TKey key, TData data){
+//    public DictionaryObject(TKey key, TData data){
+//        this.key = key;
+//        this.data = data;
+//    }
+
+    private DictionaryObject(TKey key, TData data) {
         this.key = key;
         this.data = data;
     }
 
-//    public DictionaryObject add(TKey key, TData data){
-//        try{
-//            return new DictionaryObject(key, data);
-//        }catch (Exception error){
-//            ErrorsHandlig.errorHandling(error);
-//            return null;
-//        }
-//    }
+
+    public static <TKey, TData> DictionaryObject<TKey, TData> add(TKey key, TData data){
+        try{
+            return new DictionaryObject(key, data);
+        }catch (Exception error){
+            ErrorsHandlig.errorHandling(error);
+            return null;
+        }
+    }
 
     public TData getData() {
         return data;
