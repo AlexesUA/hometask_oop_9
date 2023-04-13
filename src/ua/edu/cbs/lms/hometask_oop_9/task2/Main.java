@@ -27,13 +27,13 @@ public class Main {
         System.out.println(mlString.getListsClass() + ": " + mlString.getCount() + "; " + mlString.getLength());
         System.out.println(mlInteger.getListsClass() + ": " + mlInteger.getCount() + "; " + mlInteger.getLength());
 
-        System.out.println("index 3 = " + mlString.getElemrnt(3));
-        System.out.println("index -2 = " + mlString.getElemrnt(-2));
-        System.out.println("index 21 = " + mlString.getElemrnt(21));
+        System.out.println("index 3 = " + mlString.getElement(3));
+        System.out.println("index -2 = " + mlString.getElement(-2));
+        System.out.println("index 21 = " + mlString.getElement(21));
 
-        System.out.println("index 4 = " + mlInteger.getElemrnt(4));
-        System.out.println("index -23 = " + mlInteger.getElemrnt(-23));
-        System.out.println("index 32 = " + mlInteger.getElemrnt(32));
+        System.out.println("index 4 = " + mlInteger.getElement(4));
+        System.out.println("index -23 = " + mlInteger.getElement(-23));
+        System.out.println("index 32 = " + mlInteger.getElement(32));
 
     }
 }
