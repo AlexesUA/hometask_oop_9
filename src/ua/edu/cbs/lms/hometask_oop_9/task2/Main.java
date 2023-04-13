@@ -8,16 +8,32 @@ public class Main {
         MyList<String> mlString = new MyList<>();
         MyList<Integer> mlInteger = new MyList<>(12);
 
-        System.out.println(mlString.getListsClass() + ": " + mlString.getCount());
-        System.out.println(mlInteger.getListsClass() + ": " + mlInteger.getCount());
+        System.out.println(mlString.getListsClass() + ": " + mlString.getCount() + "; " + mlString.getLength());
+        System.out.println(mlInteger.getListsClass() + ": " + mlInteger.getCount() + "; " + mlInteger.getLength());
 
 
-        //List<String> lStr= new ArrayList<>();
+//        List<String> lStr= new ArrayList<>();
+//        System.out.println(lStr.getClass());
 
         for(int i=0; i<11; i++) {
             mlString.add(String.format("%s",i));
         }
 
+        for(int i=0; i<31; i++) {
+            mlInteger.add(i);
+        }
+
+
+        System.out.println(mlString.getListsClass() + ": " + mlString.getCount() + "; " + mlString.getLength());
+        System.out.println(mlInteger.getListsClass() + ": " + mlInteger.getCount() + "; " + mlInteger.getLength());
+
+        System.out.println("index 3 = " + mlString.getElemrnt(3));
+        System.out.println("index -2 = " + mlString.getElemrnt(-2));
+        System.out.println("index 21 = " + mlString.getElemrnt(21));
+
+        System.out.println("index 4 = " + mlInteger.getElemrnt(4));
+        System.out.println("index -23 = " + mlInteger.getElemrnt(-23));
+        System.out.println("index 32 = " + mlInteger.getElemrnt(32));
 
     }
 }

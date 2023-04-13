@@ -36,13 +36,13 @@ public class MyList <T>{
     }
 
     public String getListsClass(){
-        return arraysMyList.getClass().getName();
+        return arraysMyList.getClass().getSimpleName();
     }
 
     public boolean add(T element){
         try {
             if (count + 1 == arraysMyList.length) {
-                if(increasingArray()){
+                if(!increasingArray()){
                     throw new Exception("Increasing list error.");
                 }
             }
@@ -61,11 +61,28 @@ public class MyList <T>{
         try {
             T[] newArray = arraysMyList;
             arraysMyList = (T[]) new Object[(int)(newArray.length*1.5)];
-            arraysMyList = newArray.clone();
+
+            for(int i=0; i<newArray.length; i++)
+                arraysMyList[i] = newArray[i];
             return true;
         }catch (Exception error){
             ErrorsHandlig.errorHandling(error);
             return false;
+        }
+    }
+
+    public T getElement(int index){
+        try{
+            if(index<0) {
+                throw new Exception("Out of bounds array. Index less than to 0.");
+            } else if (index>=count) {
+                throw new Exception("Out of bounds array. Index is greater then to length array.");
+            } else {
+                return arraysMyList[index];
+            }
+        }catch (Exception error){
+            ErrorsHandlig.errorHandling(error);
+            return null;
         }
     }
 
