@@ -1,5 +1,5 @@
 # hometask_oop_9
-Home Task 9 
+Home Task 9 Generics
 
 
 Завдання 2 
