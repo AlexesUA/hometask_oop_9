@@ -27,6 +27,10 @@ public class MyDictionary <TKey, TData>{
         return count;
     }
 
+    public int getLength() {
+        return dictionary.length;
+    }
+
     public boolean add(TKey key, TData data){
         try{
             if(count == dictionary.length){
