@@ -3,7 +3,7 @@ package ua.edu.cbs.lms.hometask_oop_9.task5;
 import ua.edu.cbs.lms.hometask_oop_9.task2.ErrorsHandlig;
 
 public class MyClass <T>{
-    T variables;
+    private T variables;
 
     private MyClass (T variables){
         this.variables = variables;
@@ -18,4 +18,7 @@ public class MyClass <T>{
         }
     }
 
+    public T getVariables() {
+        return variables;
+    }
 }
