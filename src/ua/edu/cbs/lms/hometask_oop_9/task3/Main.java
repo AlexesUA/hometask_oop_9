@@ -31,9 +31,9 @@ public class Main {
         dcStrStr.add("Птах","Bird");
         dcStrStr.add("Робота","Work");
 
-        System.out.println(dcStrStr.getKeyData("Вітер"));
-        System.out.println(dcStrStr.getKeyData("Сонце"));
-        System.out.println(dcStrStr.getKeyData("Робота"));
+        System.out.println("Вітер = " + dcStrStr.getKeyData("Вітер"));
+        System.out.println("Сонце = " + dcStrStr.getKeyData("Сонце"));
+        System.out.println("Робота = " + dcStrStr.getKeyData("Робота"));
 
         System.out.println(dcStrStr.getDictionaryOnIndex(3));
         System.out.println(dcStrStr.getDictionaryOnIndex(6, true));

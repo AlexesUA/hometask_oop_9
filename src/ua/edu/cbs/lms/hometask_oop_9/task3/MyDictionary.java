@@ -37,11 +37,18 @@ public class MyDictionary <TKey, TData>{
                 if(!increasingArray()) throw new Exception("Increasing array error.");
             }
 
-            if(dictionary[count].add(key, data) != null) {
-                count++;
-                return true;
-            }
-            return false;
+//            if(dictionary[count].add(key, data) != null) {
+//                count++;
+//                return true;
+//            }
+//            return false;
+
+
+            dictionary[count] = new DictionaryObject(key, data);
+            count++;
+            return true;
+
+
         }catch (Exception error){
             ErrorsHandlig.errorHandling(error);
             return false;
